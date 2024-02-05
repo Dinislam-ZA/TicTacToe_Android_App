@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.registration.RegisterFragment">
+
+    <EditText
+        android:id="@+id/user_password_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/repeat_password_hint"
+        android:inputType="textPassword"
+        android:minWidth="256dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/user_password"
+        app:layout_constraintTop_toBottomOf="@+id/user_password" />
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="128dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/username_hint"
+        android:inputType="textPersonName"
+        android:minWidth="256dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/user_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:minWidth="256dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/user_name"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+    <EditText
+        android:id="@+id/user_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:backgroundTint="@color/teal_700"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/phone_hint"
+        android:inputType="phone"
+        android:minWidth="256dp"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/user_password_repeat"
+        app:layout_constraintTop_toBottomOf="@+id/user_password_repeat" />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="92dp"
+        android:gravity="center"
+        android:hint="@string/reg_button_text"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_phone_number" />
+
+    <TextView
+        android:id="@+id/view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

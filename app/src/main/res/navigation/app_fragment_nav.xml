@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_fragment_nav"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.tiktaktoe.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_menuFragment2"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.tiktaktoe.ui.registration.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.tiktaktoe.ui.menu.MenuFragment"
+        android:label="menu_fragment"
+        tools:layout="@layout/menu_fragment" >
+        <action
+            android:id="@+id/action_menuFragment_to_gameSessionFragment"
+            app:destination="@id/gameSessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSessionFragment"
+        android:name="com.example.tiktaktoe.ui.session.GameSessionFragment"
+        android:label="game_session_fragment"
+        tools:layout="@layout/game_session_fragment" />
+</navigation>
